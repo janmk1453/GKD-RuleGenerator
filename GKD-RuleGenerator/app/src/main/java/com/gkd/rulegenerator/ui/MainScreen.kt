@@ -3,8 +3,14 @@
 
 package com.gkd.rulegenerator.ui
 
-import androidx.compose.animation.Crossfade
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -110,9 +116,16 @@ fun MainScreen() {
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            Crossfade(
+            AnimatedContent(
                 targetState = selectedTab,
-                animationSpec = tween(durationMillis = 300),
+                transitionSpec = {
+                    val direction = if (targetState > initialState) 1 else -1
+                    val duration = 300
+                    slideInHorizontally(tween(duration)) { direction * it } +
+                        fadeIn(tween(duration)) togetherWith
+                        slideOutHorizontally(tween(duration)) { -direction * it } +
+                        fadeOut(tween(duration)) using SizeTransform(clip = false)
+                },
                 label = "tab_transition"
             ) { tab ->
                 when (tab) {

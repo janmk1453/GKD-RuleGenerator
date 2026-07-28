@@ -11,9 +11,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 data class AiConfig(
-    val apiUrl: String = "https://api.openai.com/v1/chat/completions",
+    val apiUrl: String = "",
     val apiKey: String = "",
-    val model: String = "gpt-4o",
+    val model: String = "",
     val systemPromptEnabled: Boolean = true
 )
 
@@ -25,9 +25,9 @@ class AiConfigStore(context: Context) {
     val config: StateFlow<AiConfig> = _config.asStateFlow()
 
     private fun loadConfig(): AiConfig = AiConfig(
-        apiUrl = prefs.getString(KEY_API_URL, AiConfig().apiUrl) ?: AiConfig().apiUrl,
+        apiUrl = prefs.getString(KEY_API_URL, "") ?: "",
         apiKey = prefs.getString(KEY_API_KEY, "") ?: "",
-        model = prefs.getString(KEY_MODEL, "gpt-4o") ?: "gpt-4o",
+        model = prefs.getString(KEY_MODEL, "") ?: "",
         systemPromptEnabled = prefs.getBoolean(KEY_SYSTEM_PROMPT, true)
     )
 
