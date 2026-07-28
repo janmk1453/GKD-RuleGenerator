@@ -1,0 +1,15 @@
+# MIUIX 参考库（仅作参考，不纳入项目）
+miuix-0.9.3/
+
+# 快照示例数据
+酷安_MainActivity-*/
+
+# 方案文档（已整合到项目中）
+方案.md
+需求文档.md
+需求.txt
+UI 规范.md
+
+# OS 文件
+.DS_Store
+Thumbs.db

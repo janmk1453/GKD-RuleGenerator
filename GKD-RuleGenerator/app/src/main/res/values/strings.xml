@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026, GKD-RuleGenerator contributors
+     SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="app_name">GKD 规则生成器</string>
+    <string name="snapshot_title">快照管理</string>
+    <string name="rule_title">规则生成</string>
+    <string name="ai_title">AI 助手</string>
+    <string name="settings_title">设置</string>
+    <string name="import_snapshot">导入快照</string>
+    <string name="paste_snapshot_json">粘贴快照 JSON</string>
+    <string name="node_details">节点详情</string>
+    <string name="select_template">选择模板</string>
+    <string name="use_template">使用此模板</string>
+    <string name="configure_parameters">配置参数</string>
+    <string name="app_id">应用 ID</string>
+    <string name="target_texts">目标文本（逗号分隔）</string>
+    <string name="generate_rule">生成规则</string>
+    <string name="generated_rule">生成的规则</string>
+    <string name="copy_rule">复制规则</string>
+    <string name="ai_service">AI 服务</string>
+    <string name="api_key">API Key</string>
+    <string name="model">模型</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="show_node_bounds">显示节点边界</string>
+    <string name="node_color">节点颜色</string>
+    <string name="version">版本</string>
+    <string name="github">GitHub</string>
+    <string name="view_source">查看源代码</string>
+    <string name="configured">已配置</string>
+    <string name="not_configured">未配置</string>
+    <string name="describe_rule">描述你想要的规则</string>
+    <string name="send">发送</string>
+    <string name="click_to_select_node">点击截图选择节点</string>
+    <string name="splash_ad_template">开屏广告跳过</string>
+    <string name="splash_ad_description">跳过应用启动时的开屏广告</string>
+    <string name="popup_close_template">弹窗关闭</string>
+    <string name="popup_close_description">关闭弹窗广告</string>
+    <string name="update_prompt_template">更新提示</string>
+    <string name="update_prompt_description">关闭应用更新提示</string>
+    <string name="teen_mode_template">青少年模式</string>
+    <string name="teen_mode_description">关闭青少年模式弹窗</string>
+</resources>

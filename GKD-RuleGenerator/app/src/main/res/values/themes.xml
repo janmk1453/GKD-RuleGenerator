@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2026, GKD-RuleGenerator contributors
+     SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <style name="Theme.GKDRuleGenerator" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

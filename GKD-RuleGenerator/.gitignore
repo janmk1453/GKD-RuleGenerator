@@ -1,0 +1,50 @@
+# Gradle files
+.gradle/
+build/
+gradle-app-settings/
+
+# Local configuration file (contains SDK paths, signing configs)
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.captures/
+
+# Keystore files (signing keys - NEVER commit)
+*.jks
+*.keystore
+keystore.*
+release.keystore
+debug.keystore
+
+# External native build folder
+.externalNativeBuild/
+.cxx/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# API keys and secrets (in case they get placed here)
+*.env
+.env*
+secrets.properties
+api-keys.properties
+
+# Generated files
+generated/
+*.generated.*
+
+# Kotlin
+.kotlin/
