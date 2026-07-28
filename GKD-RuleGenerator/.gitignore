@@ -3,6 +3,10 @@
 build/
 gradle-app-settings/
 
+# Release outputs
+app/release/
+*.apk
+
 # Local configuration file (contains SDK paths, signing configs)
 local.properties
 
