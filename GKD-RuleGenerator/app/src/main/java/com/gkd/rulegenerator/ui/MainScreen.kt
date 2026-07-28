@@ -3,6 +3,8 @@
 
 package com.gkd.rulegenerator.ui
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -108,11 +110,17 @@ fun MainScreen() {
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            when (selectedTab) {
-                0 -> SnapshotScreen(viewModel = snapshotViewModel)
-                1 -> RuleScreen(viewModel = ruleViewModel)
-                2 -> AiScreen(viewModel = aiViewModel)
-                3 -> SettingsScreen(viewModel = settingsViewModel)
+            Crossfade(
+                targetState = selectedTab,
+                animationSpec = tween(durationMillis = 300),
+                label = "tab_transition"
+            ) { tab ->
+                when (tab) {
+                    0 -> SnapshotScreen(viewModel = snapshotViewModel)
+                    1 -> RuleScreen(viewModel = ruleViewModel)
+                    2 -> AiScreen(viewModel = aiViewModel)
+                    3 -> SettingsScreen(viewModel = settingsViewModel)
+                }
             }
         }
     }
