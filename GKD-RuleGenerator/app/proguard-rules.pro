@@ -28,3 +28,14 @@
 -keep class dagger.hilt.** { *; }
 -keep class javax.inject.** { *; }
 -keep class * extends dagger.hilt.android.internal.managers.ViewComponentManager$FragmentContextWrapper { *; }
+
+# Ktor - suppress SLF4J missing class warnings
+-dontwarn org.slf4j.**
+-keep class org.slf4j.** { *; }
+
+# Ktor client
+-keep class io.ktor.** { *; }
+-dontwarn io.ktor.**
+
+# kotlinx.coroutines
+-dontwarn kotlinx.coroutines.**
